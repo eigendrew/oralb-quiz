@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendation</title>
+    <link rel="stylesheet" href="styler.css">
+</head>
+<body>
+    <div class="recommendation-container">
+      <h1>We recommend gifting the</h1>
+      <div id="recommendation-content"></div>
+    </div>
+  
+    <script>
+      const data = JSON.parse(localStorage.getItem('recommendation'));
+  
+      const container = document.getElementById('recommendation-content');
+      if (data) {
+        container.innerHTML = `
+          <div class="product-name">${data.productName}</div>
+          <img class="product-image" src="${data.imageUrl}" alt="${data.productName}">
+          <div class="product-spiel">${data.spiel}</div>
+          <a href="${data.buyUrl}" class="product-link" target="_blank">Buy Now</a><br><br>
+          <a href="quiz.html" class="product-link" style="background-color:#666;">Take Quiz Again</a><br><br>
+          <a href="https://oralb.com/en-us/products/shop-all/" class="product-link" style="background-color:#888;">View Full Catalog</a>
+        `;
+      } else {
+        container.innerHTML = "<p>Sorry, we couldn't find a perfect match.</p>";
+      }
+    </script>
+  </body>
+  
+</html>

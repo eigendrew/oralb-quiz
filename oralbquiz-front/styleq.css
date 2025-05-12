@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#question-container {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.option {
+  background: #e0f0ff;
+  border: none;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.option:hover {
+  background: #cce6ff;
+}
+
+.option-main {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.option-sub {
+  display: block;
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}
+
+#prev-btn {
+  background-color: transparent;
+  color: #555555; /* dark gray text */
+  border: 2px solid #555555; /* matching border */
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#prev-btn:hover {
+  background-color: #f0f0f0; /* light gray when hovered */
+}
+
+#prev-btn:disabled {
+  background-color: #f0f0f0; /* same gray as hover */
+  color: #555555; /* keep text dark gray */
+  border-color: #555555; /* optional: keep border same color */
+  cursor: not-allowed;
+}
+
+.buy-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1em;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #005fa3;
+}
+
+.secondary-button {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  padding: 10px 20px;
+  font-size: 0.95em;
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.secondary-button:hover {
+  background-color: #eee;
+  border-color: #999;
+}
+
+#email-input {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1em;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}

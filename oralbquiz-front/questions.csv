@@ -1,0 +1,23 @@
+qNumber,question,optionMain,optionSub,logicCode
+1,Who is this gift for?,Myself,,MYSELF
+1,Who is this gift for?,My partner,,PARTNER
+1,Who is this gift for?,My parent,,PARENT
+1,Who is this gift for?,My child,,CHILD
+1,Who is this gift for?,Someone else,"a friend, relative or colleague",OTHER
+2,What’s the main reason you’re considering a toothbrush gift?,Helpful upgrade,they could really use a better brush,UTILITY
+2,What’s the main reason you’re considering a toothbrush gift?,Thoughtful gift,just want to give something useful and caring,GIFT
+2,What’s the main reason you’re considering a toothbrush gift?,Treating myself,looking for one for myself too,PERSONALUSE
+2,What’s the main reason you’re considering a toothbrush gift?,Just browsing,exploring ideas for now,BROWSE
+3,How fancy are we feeling with this gift?,Just a thoughtful little something,models under $50,LOW
+3,How fancy are we feeling with this gift?,Let’s impress without overdoing it,models $60–$120,MID
+3,How fancy are we feeling with this gift?,I want to spoil them a bit,models $120+,HIGH
+4,"Are they new to the electric toothbrush game?",Yep,this is their first electric brush ever!,NEW
+4,Are they new to the electric toothbrush game?,Nope,they’re ready to level up their brushing life,CURRENT
+5,What kind of vibe do they give off?,Super practical,they love stuff that just works,PRACTICAL
+5,What kind of vibe do they give off?,Total self-care type,"routines, glow-ups, the works",SELFCARE
+6,What would get them the most excited?,"Whoa, It’s smart?","loves tech, apps, and features",SMART
+6,What would get them the most excited?,"Omg it’s so cute","sleek design, feels luxe",DESIGN
+7,When are you planning to give this gift?,Within the next few days,,ASAP
+7,When are you planning to give this gift?,"Sometime soon, but not urgent",,SOON
+7,When are you planning to give this gift?,"Eventually, maybe for a future event",,OCCASION
+7,When are you planning to give this gift?,"No rush, just looking",,LATER

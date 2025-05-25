@@ -157,7 +157,8 @@ function showRecommendation() {
         const email = document.getElementById('email-input').value.trim();
         if (email) {
             localStorage.setItem('userEmail', email);
-            submitQuizToAPI(email, answers).then(() => {
+            // submitQuizToAPI(email, answers).then(() => {
+            submitQuizToAPI(email, answers, recommendedProduct).then(() => {
                 console.log("📤 Submission completed, now redirecting...");
                 window.location.href = 'result.html';
             });            
@@ -196,15 +197,44 @@ loadData();
 // 🔹 Submit to Azure Function
 const apiUrl = "/api/submitQuiz"; // your Azure Function URL
 
-function submitQuizToAPI(email, answers) {
-    console.log("📤 Sending to Azure Function:", { email, answers });
+// function submitQuizToAPI(email, answers) {
+//     console.log("📤 Sending to Azure Function:", { email, answers });
+
+//     return fetch(apiUrl, {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({ email, answers })
+//     })
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log("✅ Submitted to API:", data);
+//     })
+//     .catch(err => {
+//         console.error("❌ Error submitting to API:", err);
+//     });
+// }
+
+function submitQuizToAPI(email, answers, recommendation) {
+    const payload = {
+        email,
+        answers,
+        recommendation: {
+            name: recommendation.productName,
+            imageUrl: recommendation.imageUrl,
+            buyUrl: recommendation.buyUrl // ✅ make sure this field name matches what's in logic.csv
+        }
+    };
+
+    console.log("📤 Sending to Azure Function:", payload);
 
     return fetch(apiUrl, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ email, answers })
+        body: JSON.stringify(payload)
     })
     .then(res => res.json())
     .then(data => {
